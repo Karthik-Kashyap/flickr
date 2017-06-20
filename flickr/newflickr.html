@@ -1,0 +1,85 @@
+<html>  
+<head>  
+<title>Creating your first app with Flickr API</title>  
+<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">  
+
+<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">  
+</style>  
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>  
+<link rel="stylesheet" type="text/css" href="newflickr.css">
+<script src="newflickr.js"></script>
+<script>  
+
+/*
+var apiurl,myresult,apiurl_size,selected_size;  
+apiurl = "https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=390d39008ba38713f08359f7ac8e819a&per_page=10&format=json&nojsoncallback=1";  
+$(document).ready(function(){  
+$("#small").click(function(){  
+selected_size=75;  
+})  
+});  
+$(document).ready(function(){  
+$("#medium").click(function(){  
+selected_size=240;  
+})  
+});  
+$(document).ready(function(){  
+$("#large").click(function(){  
+selected_size=500;  
+})  
+});  
+
+
+
+$(document).ready(function(){
+
+
+$('#button').click(function(){  
+
+$.getJSON(apiurl,function(json){  
+
+$.each(json.photos.photo,function(i,myresult){  
+
+apiurl_size = "https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=390d39008ba38713f08359f7ac8e819a&photo_id="+myresult.id+"&format=json&nojsoncallback=1";  
+$.getJSON(apiurl_size,function(size){
+	
+$.each(size.sizes.size,function(i,myresult_size){  
+if(myresult_size.width==selected_size){  
+$("#results").append('<p><a href="'+myresult_size.url+'" target="_blank"><img src="'+myresult_size.source+'"/></a></p>');  
+}  
+})  
+})  
+});  
+});  
+});  
+});  */
+</script>  
+</head>  
+<body>  
+<div class="container text-center">  
+<h2>choose the size of the images</h2>  
+<div class="row">  
+<div class="col-md-12">  
+</div>  
+</div>  
+<div class="row">  
+<div class="col-sm-4">  
+<button type="button" class="btn btn-default" id="small">small</button>  
+</div>  
+<div class="col-sm-4">  
+<button type="button" class="btn btn-default" id="medium">medium</button>  
+</div>  
+<div class="col-sm-4">  
+<button type="button" class="btn btn-default" id="large">large</button>  
+</div>  
+</div>  
+<div><p id="sizechosen"></p></div><br>
+<p class="text-center">click the button to get pictures</p>
+<button type="button" class="btn btn-success" id="button">Fetch Recent Photos</button>  
+<hr>    
+<div class="row">  
+<div id="results"></div>   
+</div>  
+ </div> 
+</body>  
+</html>  

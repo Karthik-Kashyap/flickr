@@ -1,0 +1,23 @@
+*
+{
+	font-family: Lato;
+	font-weight: 400px;
+	font-size: 150%;
+}
+
+.container
+{
+	background-color: #efefef;
+}
+
+.btn-default
+{
+	height:55px;
+	font-size: 100%;
+}
+
+.btn-lg
+{
+	margin-bottom: 20px; 
+	width:400px;
+}
